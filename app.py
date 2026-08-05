@@ -1,18 +1,9 @@
-from config import DATA_FOLDER
-from core.storage import Storage
+from parsers.lukse import LukseParser
 
 
 def main():
-    storage = Storage(DATA_FOLDER)
-
-    storage.save(
-        "status.json",
-        {
-            "status": "ok"
-        }
-    )
-
-    print("Lux Finder started")
+    parser = LukseParser()
+    parser.parse()
 
 
 if __name__ == "__main__":
