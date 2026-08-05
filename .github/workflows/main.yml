@@ -21,6 +21,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Test
+      - name: Run Lux Finder
         run: |
-          echo "Lux Finder is working!"
+          python app.ру
