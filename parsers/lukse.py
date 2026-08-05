@@ -10,8 +10,8 @@ class LukseParser(BaseParser):
         url = "https://lukse.ru/"
         html = self.get(url)
 
+        print(f"Получено {len(html)} символов")
+
         soup = BeautifulSoup(html, "lxml")
 
-        print(f"Страница {self.name} загружена")
-
-        return soup
+        print(soup.title.string if soup.title else "Без заголовка")
