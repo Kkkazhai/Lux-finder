@@ -1,0 +1,1 @@
+print("Lux Finder started")
