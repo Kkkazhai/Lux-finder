@@ -8,9 +8,7 @@ def main():
     storage.save(
         "status.json",
         {
-            "project": "Lux Finder",
-            "version": "0.1.0",
-            "status": "running"
+            "status": "ok"
         }
     )
 
