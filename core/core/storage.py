@@ -1,15 +1,14 @@
 import json
-import os
+from pathlib import Path
 
 
 class Storage:
+    def __init__(self, folder: str):
+        self.folder = Path(folder)
+        self.folder.mkdir(parents=True, exist_ok=True)
 
-    def __init__(self, folder):
-        self.folder = folder
-        os.makedirs(folder, exist_ok=True)
-
-    def save(self, filename, data):
-        path = os.path.join(self.folder, filename)
+    def save(self, filename: str, data):
+        path = self.folder / filename
 
         with open(path, "w", encoding="utf-8") as f:
             json.dump(
