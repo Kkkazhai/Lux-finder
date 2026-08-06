@@ -24,9 +24,3 @@ jobs:
       - name: Run Lux Finder
         run: |
           python app.py
-
-      - name: Upload HTML
-        uses: actions/upload-artifact@v4
-        with:
-          name: lukse-html
-          path: lukse.html
